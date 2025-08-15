@@ -90,7 +90,17 @@ def index():
                 'bat_win': int(round(result[1] * 100, 0)),
                 'bowl_win': int(round(result[0] * 100, 0))
             }
-            input_data = input_df.to_dict(orient='records')[0]
+            
+            input_data = {
+                'remaining_runs': target-score,
+                'remaining_balls': 6*(target_overs-overs)-balls,
+                'crr': crr,
+                'rrr': rrr,
+                'batter_total_runs': batsman_runs,
+                'batter_strikerate': batsman_strikerate,
+                'non_striker_runs': non_striker_runs,
+                'non_striker_strikerate': non_striker_runs
+            }
 
         except ValueError as e:
             # Handle validation errors

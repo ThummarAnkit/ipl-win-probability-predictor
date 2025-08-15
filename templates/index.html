@@ -142,9 +142,8 @@
     <div class="result">
         <h3>Input Summary:</h3>
         <ul>
-            <li><strong>Remaining Runs</strong>: {{ input_data['target_runs']-input_data['current_score'] }} |
-                <strong>Remaining Balls</strong>: {{
-                6*(input_data['target_runs']-input_data['current_score'])/input_data['rrr'] }}
+            <li><strong>Remaining Runs</strong>: {{ input_data['remaining_runs'] }} |
+                <strong>Remaining Balls</strong>: {{ input_data['remaining_balls'] }}
             </li>
             <li><strong>CRR</strong>: {{ input_data['crr'] }} | <strong>RRR</strong>: {{ input_data['rrr'] }}</li>
             <li><strong>Batsman Runs Scored</strong>: {{ input_data['batter_total_runs'] }} | <strong>Batsman
